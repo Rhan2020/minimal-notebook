@@ -1,0 +1,45 @@
+{
+  "name": "minimal-notebook",
+  "private": true,
+  "version": "1.0.0",
+  "description": "一个极简的在线笔记本应用，支持自动保存、主题切换和链接分享功能",
+  "type": "module",
+  "scripts": {
+    "dev:client": "vite --host --port 3000",
+    "dev": "pnpm dev:client",
+    "build:client": "vite build --outDir dist/static",
+    "build": "rm -rf dist && pnpm build:client && cp package.json dist && touch dist/build.flag",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.9.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-error-boundary": "^4.0.13",
+    "react-router-dom": "^7.3.0",
+    "recharts": "^2.15.1",
+    "sonner": "^2.0.2",
+    "tailwind-merge": "^3.0.2",
+
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.21",
+    "jsdom": "^24.0.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vitest": "^1.5.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
